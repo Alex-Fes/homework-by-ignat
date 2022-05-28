@@ -1,9 +1,22 @@
 import React from 'react'
+import styles from "./Message.module.css";
 
-function Message() {
+type TypeOfMessageData = {
+    avatar: string,
+    name: string,
+    message: string,
+    time: string
+}
+
+function Message(props: TypeOfMessageData) {
     return (
-        <div>
-
+        <div className={styles.content}>
+            <div><img src={props.avatar} alt=''/></div>
+            <div className={styles.messageContent}>
+                <div className={styles.name}>{props.name}</div>
+                <div className={styles.message}>{props.message}</div>
+                <div className={styles.time}>{props.time}</div>
+            </div>
         </div>
     )
 }
