@@ -45,6 +45,9 @@
 .message {
     padding-right: 30px;
     color: #dfe4f1;
+    min-width: 150px;
+    max-width: 300px;
+    word-wrap: break-word;
 }
 
 .time {
