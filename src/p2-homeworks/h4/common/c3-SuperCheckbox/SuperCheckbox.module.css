@@ -3,16 +3,18 @@
     width: 20px;
     height: 20px;
     margin-right: 10px;
-    outline: #4f73d2 solid 1px;
+    outline: #1b1d23 solid 1px;
 
 }
 .checkbox:checked{
     appearance: none;
     background-image: url('checked.png');
-    background-color: #b1d7ec;
+    background-color: #f1f3f5;
+    background-size: contain;
+
 }
 .checkbox:focus {
-    outline: #4f73d2 solid 1px;
+    outline: #1b1d23 solid 1px;
 }
 .spanClassName {
 
