@@ -1,0 +1,14 @@
+
+.spanStyle {
+    font-weight: bold;
+}
+
+.spanStyle:after {
+    display: inline-block;
+    content: '';
+    background-image: url("https://img.icons8.com/ios-filled/100/pencil-tip.png");
+    background-size: contain;
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+}
