@@ -1,0 +1,28 @@
+.body {
+    width: 100%;
+    /*max-width: available; !*максимальная ширина может иметь другое значение*!*/
+    margin: 0 auto;
+
+}
+
+
+.fieldButton {
+    display: table;
+}
+.fieldButton div {
+    float: left;
+}
+
+.users {
+    display: table;
+    width: 270px;
+}
+
+
+.name {
+    float: left;
+}
+
+.age {
+    float: right;
+}
