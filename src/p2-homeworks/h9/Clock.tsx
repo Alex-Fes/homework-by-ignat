@@ -3,7 +3,7 @@ import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
 
 function Clock() {
     const [timerId, setTimerId] = useState<number>(0)
-    const [date, setDate] = useState<Date>(new Date())
+    const [date, setDate] = useState<Date>()
     const [show, setShow] = useState<boolean>(false)
 
     const stop = () => {
@@ -24,8 +24,8 @@ function Clock() {
         setShow(false)// close
     }
 
-    const stringTime = date.toLocaleTimeString() // fix with date
-    const stringDate = date.toLocaleDateString() // fix with date
+    const stringTime = date?.toLocaleTimeString() // fix with date
+    const stringDate = date?.toLocaleDateString() // fix with date
 
     return (
         <div>
