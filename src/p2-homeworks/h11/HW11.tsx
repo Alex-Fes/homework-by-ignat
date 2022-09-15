@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import SuperRange from './common/c7-SuperRange/SuperRange'
 import SuperDoubleRange from './common/c8-SuperDoubleRange/SuperDoubleRange'
 
-type CurrentValueType = Array<number>
+export type CurrentValueType = Array<number>
 
 function HW11() {
     // const [value1, setValue1] = useState(0)
@@ -17,14 +17,14 @@ function HW11() {
     //     setValue2(currentValue[1])
     // }
 
-    const [value, setValue] = useState<[number, number]>([0, 100])
+    const [value, setValue] = useState<CurrentValueType>([0, 100])
 
     const onChangeRange = (newValue: number) => {
-        setValue([newValue, value[1]])
+       if (newValue < value[1]) setValue([newValue, value[1]])
     }
 
-    const onChangeSuperDoubleRange = (newValue: [number, number]) => {
-        setValue(newValue as [number, number])
+    const onChangeSuperDoubleRange = (newValue: CurrentValueType) => {
+        setValue(newValue)
     }
 
 
@@ -34,7 +34,8 @@ function HW11() {
             homeworks 11
 
             {/*should work (должно работать)*/}
-            <div>
+            <div  style={{display:'flex', flexDirection: 'column', alignItems:'center'}}>
+            <div style={{display: 'flex', flexDirection: 'row'}}>
                 <span>{value[0]}</span>
                 <SuperRange
                     onChangeRange={onChangeRange}
@@ -42,9 +43,10 @@ function HW11() {
 
                     // сделать так чтоб value1 изменялось
                 />
+                <span>{value[1]}</span>
             </div>
 
-            <div>
+            <div style={{display: 'flex', flexDirection: 'row'}}>
                 <span>{value[0]}</span>
                 <SuperDoubleRange
                     onChangeRange={onChangeSuperDoubleRange}
@@ -53,7 +55,7 @@ function HW11() {
                 />
                 <span>{value[1]}</span>
             </div>
-
+            </div>
             <hr/>
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeSuperRange/>*/}
