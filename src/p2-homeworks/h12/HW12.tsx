@@ -13,7 +13,6 @@ function HW12() {
     const theme = useSelector<AppStoreType, initStateType>(state => state.theme); // useSelector
     const dispatch = useDispatch();
     const onChangeCallback = (choseTheme: string) => {
-
         dispatch(changeThemeC(choseTheme))
     }
 
